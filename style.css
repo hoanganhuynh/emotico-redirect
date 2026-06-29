@@ -8,8 +8,8 @@
   --fg-muted:      #6b7280;
   --fg-subtle:     #9ca3af;
   --accent:        #f59e0b;
-  --color-gin:     #E8541A;
-  --color-gin-dark:#B33D10;
+  --accent-hover:  #d97706;
+  --accent-900:    #78350f;
   --surface:       #f9fafb;
   --surface-2:     #f3f4f6;
   --border:        #e5e7eb;
@@ -88,7 +88,7 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--color-gin);
+  background: var(--accent);
 }
 
 /* ── Heading ── */
@@ -129,7 +129,7 @@ h1 {
 .countdown {
   font-size: 72px;
   font-weight: 800;
-  color: var(--color-gin);
+  color: var(--accent);
   line-height: 1;
   letter-spacing: -0.03em;
   transition: transform 0.15s ease;
@@ -150,7 +150,7 @@ h1 {
 
 .progress-fill {
   height: 100%;
-  background: var(--color-gin);
+  background: var(--accent);
   border-radius: 9999px;
   width: 100%;
   transition: width 1s linear;
@@ -162,7 +162,7 @@ h1 {
   align-items: center;
   gap: 8px;
   padding: 11px 22px;
-  background: var(--color-gin);
+  background: var(--accent);
   color: #fff;
   text-decoration: none;
   border-radius: var(--r);
@@ -172,7 +172,7 @@ h1 {
 }
 
 .cta-btn:hover {
-  background: var(--color-gin-dark);
+  background: var(--accent-hover);
   transform: translateY(-1px);
 }
 
