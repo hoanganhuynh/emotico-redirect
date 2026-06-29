@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>suckhoetinhthan.com – Emotico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="logo">suckhoetinhthan.com</div>
+    <h1>Chuyên trang này hiện là <span>tài sản số</span> thuộc sở hữu bởi</h1>
+    <p class="desc"><strong>Công ty Cổ phần Emotico</strong><br>Bạn sẽ được chuyển hướng đến trang chính thức.</p>
+
+    <div class="countdown-wrap">
+      <div class="countdown-label">Chuyển hướng sau</div>
+      <div class="countdown" id="count">8</div>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress"></div>
+    </div>
+
+    <a class="redirect-btn" href="https://emoti.co">Đến ngay &rarr;</a>
+
+    <div class="footer">emoti.co &copy; Emotico JSC</div>
+  </div>
+
+  <script>
+    const TOTAL = 8;
+    let n = TOTAL;
+    const countEl = document.getElementById('count');
+    const progressEl = document.getElementById('progress');
+
+    const timer = setInterval(() => {
+      n--;
+      countEl.textContent = n;
+      countEl.classList.add('pulse');
+      setTimeout(() => countEl.classList.remove('pulse'), 200);
+      progressEl.style.width = (n / TOTAL * 100) + '%';
+      if (n <= 0) {
+        clearInterval(timer);
+        window.location.href = 'https://emoti.co';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
